@@ -6,7 +6,18 @@
             this.name = name;
         },
         { Speed: 0 },
-        { Health: 0 }
+        { Health: 0 },
+        {
+            Fly: function () {
+
+            },
+            Die: function () {
+
+            },
+            Shoot: function () {
+
+            }
+        }
         );
 
     var Transport = WinJS.Class.derive(AirModel,
