@@ -42,4 +42,14 @@
     WinJS.Namespace.define("AirModel", { Transport: Transport });
     WinJS.Namespace.define("AirModel", { Transport: Bomber });
     WinJS.Namespace.define("AirModel", { Transport: Assault });
+    
+    var GetInstance = WinJS.Class.define(function (name) {
+        switch (name) {
+            case "transport": return new Transport(name);
+            case "bomber": return new Bomber(name);
+            case "assault": return new Assault(name);
+            default: return new Bomber(name);
+        }
+    });
+    WinJS.Namespace.define("AirModel", { GetInstance: GetInstance });
 })();
