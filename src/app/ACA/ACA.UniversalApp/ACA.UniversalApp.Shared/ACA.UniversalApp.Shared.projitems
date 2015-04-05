@@ -8,6 +8,7 @@
   <ItemGroup>
     <Content Include="$(MSBuildThisFileDirectory)js\default.js" />
     <Content Include="$(MSBuildThisFileDirectory)js\Model\AirModel.js" />
-    <Content Include="$(MSBuildThisFileDirectory)js\UI.js" />
+    <Content Include="$(MSBuildThisFileDirectory)js\Model\Player.js" />
+    <Content Include="$(MSBuildThisFileDirectory)js\App.js" />
   </ItemGroup>
 </Project>
