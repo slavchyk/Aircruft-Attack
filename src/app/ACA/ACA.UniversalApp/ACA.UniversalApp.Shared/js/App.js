@@ -1,13 +1,19 @@
 ﻿(function () {
     var UI = WinJS.Class.define(function (name) {
         this.name = name;
+    },
+    {
+        Create: function () {
+
+        }
     }
     );
     
 
     var Scene = WinJS.Class.define(function (name) {
         this.name = name;
-    });
+    }
+    );
     
 
     var Control = WinJS.Class.define(function (name) {
@@ -38,12 +44,7 @@
             
             var queue = new createjs.LoadQueue(false);            
             queue.on("complete", this.afterLoad, this);
-
-            for (item in arraySource) {
-                queue.loadManifest([
-                    {id: arraySource[item].id, src: arraySource[item].src}
-                ]);
-            }
+            queue.loadManifest(arraySource);
             queue.load();
             return queue;
         },
@@ -60,12 +61,17 @@
 
 var SourceController = (function () {
     var instance;
+    var queueLoaded;
     return {
-        GetInstane: function () {
+        GetInstance: function () {
             if (!instance) {
                 instance = new App.Source();
+                instance.MethodAfterLoad(queueLoaded);
             }
             return instance;
+        },
+        EventLoaded: function (queueEvent) {
+            queueLoaded = queueEvent;
         }
     }
 })();

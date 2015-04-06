@@ -6,6 +6,7 @@
     <SharedGUID>ccb03c90-12f2-4937-b7f4-04eb3bc666a9</SharedGUID>
   </PropertyGroup>
   <ItemGroup>
+    <Content Include="$(MSBuildThisFileDirectory)createjs-2014.12.12.min.js" />
     <Content Include="$(MSBuildThisFileDirectory)js\default.js" />
     <Content Include="$(MSBuildThisFileDirectory)js\Model\AirModel.js" />
     <Content Include="$(MSBuildThisFileDirectory)js\Model\Player.js" />
