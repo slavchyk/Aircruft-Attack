@@ -13,7 +13,7 @@
             },
             Die: function () {
 
-            },//rostyk
+            },
             Shoot: function () {
 
             }
